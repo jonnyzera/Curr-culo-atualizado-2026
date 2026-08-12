@@ -267,6 +267,7 @@
         ];
 
         const experiences = [
+            { role: 'Software Engineer / Fundador', company: 'Kodeo', time: '2025 - Atualmente', color: 'tech-500', isCurrent: true, logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQEhQosoRDsyuA/company-logo_100_100/B4DZpLsqhwGQAU-/0/1762206591562?e=1788393600&v=beta&t=tXPvC0QWMIAgKKHKezWroSJ9FZHNITQCp04fqWQXx0M', tasks: ['Desenvolvimento web e Desenvolvimento de SaaS.', 'Soluções em Nuvem e integrações com Inteligência Artificial.'] },
             { role: 'Técnico em Informática Júnior', company: 'Plug Go Informática e Games', time: '2025 - Atualmente', color: 'tech-500', isCurrent: true, logo: 'https://pluggostore.com.br/PlugGo.jpeg', tasks: ['Desenvolvimento do App próprio de orçamentos, otimizando o balcão.', 'Manutenção física em Android/iOS (telas, conectores).', 'Instalação e reparo avançado de Windows/Linux.'] },
             { role: 'Suporte Técnico e Auxiliar de TI', company: 'Instituição Casa de David', time: '2024 - 2025', color: 'slate-300 dark:bg-slate-700', isCurrent: false, logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQFM7fT8zLiJuQ/company-logo_200_200/company-logo_200_200/0/1691600442480/casa_de_david_logo?e=1787788800&v=beta&t=vhZ-SnsoAqfXJLRa5HBnIzpak30i1JbbQjDk5h0nrgU', tasks: ['Suporte Nível 1: roteadores, acessos, impressoras.', 'Cabeamento estruturado corporativo.', 'Formatação preventiva em massa.'] },
             { role: 'Estágio em Marketing e Vendas', company: 'Geek Point', time: '2023 - 2024', color: 'slate-300 dark:bg-slate-700', isCurrent: false, logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQGH2hp_CJt-Tw/company-logo_200_200/company-logo_200_200/0/1630626874230/geek_point_store_logo?e=1787788800&v=beta&t=4j-1QvrjV73YZRLTBmaJmLtbp2IaFfHcNFcDACmJn2g', tasks: ['SEO e Ads em Shopee/Mercado Livre.', 'Campanhas de performance (Meta/Google).', 'Líder de Vendas em Dezembro/2023.'] },
@@ -362,7 +363,7 @@
             container.innerHTML = experiences.map(e => `
                 <div class="relative flex items-start gap-4">
                     <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-${e.color} border-4 border-white dark:border-slate-950 shadow"></span>
-                    ${e.logo ? `<img src="${e.logo}" alt="${e.company} logo" class="w-10 h-10 rounded-md object-cover border border-slate-200 dark:border-slate-700 shrink-0 bg-white" onerror="this.style.display='none'">` : ''}
+                    ${e.logo ? `<img src="${e.logo}" alt="${e.company} logo" class="w-10 h-10 rounded-md object-cover border border-slate-200 dark:border-slate-700 shrink-0 bg-white" onerror="this.onerror=null; this.src='https://placehold.co/100x100/e2e8f0/475569?text=Logo';">` : ''}
                     <div class="space-y-2 flex-1">
                         <div class="flex justify-between items-start flex-wrap gap-2">
                             <div><h4 class="font-bold text-base text-slate-900 dark:text-white">${e.role}</h4><p class="text-slate-500 text-xs">${e.company}</p></div>
