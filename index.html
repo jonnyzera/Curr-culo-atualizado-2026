@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Software Engineer </title>
+    <title>João Victor dos Santos | Software Engineer</title>
     <link rel="icon" type="image/png" href="./img/svg_macaco_favicon.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -62,7 +63,7 @@
             </div>
             
             <div class="px-6 md:px-10 pb-6 md:pb-10 relative z-10">
-                <!-- Foto Redonda (Estilo LinkedIn) -->
+                <!-- Foto Redonda -->
                 <div class="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full border-4 border-white dark:border-slate-900 overflow-hidden -mt-14 sm:-mt-18 bg-slate-50 dark:bg-slate-800 shadow-sm">
                     <img src="./img/fotoGrufixPretoBranco.jpeg" alt="João Victor" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x400/e2e8f0/475569?text=Joao+Victor'">
                 </div>
@@ -114,7 +115,7 @@
                 <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Divisões Ativas e Empreendimentos</h2>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="divisions-container">
-                <!-- Gerado via JS (Kodeo e Grufix) -->
+                <!-- Gerado via JS -->
             </div>
         </section>
 
@@ -147,7 +148,7 @@
                 </div>
             </div>
 
-            <!-- Skills Direita (Estático por questões visuais específicas) -->
+            <!-- Skills & Educação -->
             <div class="space-y-8">
                 <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 space-y-4 shadow-sm">
                     <h3 class="font-bold text-slate-900 dark:text-white text-base flex items-center gap-2"><i class="fa-solid fa-gear text-tech-600"></i><span>Competências Técnicas</span></h3>
@@ -161,7 +162,7 @@
                 <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 space-y-4 shadow-sm">
                     <h3 class="font-bold text-slate-900 dark:text-white text-base flex items-center gap-2"><i class="fa-solid fa-graduation-cap text-indigo-600"></i><span>Formação Acadêmica</span></h3>
                     <div class="flex items-start gap-3">
-                        <img src="https://media.licdn.com/dms/image/v2/D4D0BAQHUk6dvvQF82g/company-logo_100_100/company-logo_100_100/0/1664985157848/ung_logo?e=1788393600&v=beta&t=aduZRSyhcXQKdgCyCUHwLMEhmtqt_K0ZQK70GF7JczU" alt="Logo UNG" class="w-10 h-10 rounded-md object-cover border border-slate-200 dark:border-slate-700 shrink-0 bg-white">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D0BAQHUk6dvvQF82g/company-logo_100_100/company-logo_100_100/0/1664985157848/ung_logo?e=1788393600&v=beta&t=aduZRSyhcXQKdgCyCUHwLMEhmtqt_K0ZQK70GF7JczU" alt="Logo UNG" class="w-10 h-10 rounded-md object-cover border border-slate-200 dark:border-slate-700 shrink-0 bg-white" onerror="this.style.display='none'">
                         <div>
                             <h4 class="font-bold text-slate-800 dark:text-slate-200 text-xs">Bacharel em Ciência da Computação</h4>
                             <p class="text-[11px] text-slate-500">Universidade UNG CENTRO</p>
@@ -204,6 +205,7 @@
         <p>© 2026 João Victor dos Santos. Portfólio de alta conversão.</p>
     </footer>
 
+    <!-- Botão Chat IA -->
     <div class="fixed bottom-6 right-6 z-50 no-print flex flex-col items-end">
         <div id="ai-chat-window" class="hidden w-80 sm:w-96 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl overflow-hidden mb-3 transition-all duration-300 flex flex-col h-[400px]">
             <div class="bg-slate-900 dark:bg-slate-950 text-white p-4 flex justify-between items-center border-b border-slate-800">
@@ -246,14 +248,14 @@
         ];
 
         const projectsData = [
-            { id: 'pluggo', cat: 'web', color: 'indigo', badge: 'Produtividade', title: 'Sistema Orçamentos Plug Go', icon: 'fa-calculator', desc: 'Automatização e cálculo de substituição de telas e conectores para assistência técnica.', link: 'https://sistema-plug-go-t-cnico-em-celular.vercel.app/', linkText: 'Acessar Aplicativo', linkIcon: 'fa-up-right-from-square' },
+            { id: 'pluggo', cat: 'web', color: 'indigo', badge: 'Produtividade', title: 'Sistema Orçamentos Plug Go', icon: 'fa-calculator', img: 'https://media.licdn.com/dms/image/v2/D4D2DAQHSD1XIkQlSZw/profile-treasury-image-shrink_480_480/B4DZ8zGtFpJQAY-/0/1783268823777?e=1787140800&v=beta&t=ABr5E_ZDMEuCwC2Q_57lVxssIoJ2J8k_Yy1BfluIYAs', desc: 'Automatização e cálculo de substituição de telas e conectores para assistência técnica.', link: 'https://sistema-plug-go-t-cnico-em-celular.vercel.app/', linkText: 'Acessar Aplicativo', linkIcon: 'fa-up-right-from-square' },
             { id: 'jda', cat: 'web', color: 'orange', badge: 'Usinagem', title: 'JDA Usinagem', icon: 'fa-screwdriver-wrench', desc: 'Plataforma institucional e catálogo de peças industriais e ferramentaria de precisão.', link: 'https://jdausinagem.vercel.app', linkText: 'Acessar JDA', linkIcon: 'fa-up-right-from-square' },
-            { id: 'grufix', cat: 'maint', color: 'emerald', badge: 'Assistência', title: 'Portfólio & Landing Grufix', icon: 'fa-mobile-screen-button', desc: 'Canal oficial para suporte, infraestrutura física, reparos e periféricos.', link: 'https://grufix.vercel.app/', linkText: 'Ver App Grufix', linkIcon: 'fa-up-right-from-square' },
-            { id: 'zapbudget', cat: 'saas', color: 'teal', badge: 'SaaS Financeiro', title: 'Zapbudget', icon: 'fa-wallet', desc: 'Plataforma web focada no controle de orçamento pessoal rápido sem planilhas complexas.', link: 'https://www.zapbudget.com.br/', linkText: 'Acessar Zapbudget', linkIcon: 'fa-up-right-from-square' },
+            { id: 'grufix', cat: 'maint', color: 'emerald', badge: 'Assistência', title: 'Portfólio & Landing Grufix', icon: 'fa-mobile-screen-button', img: 'https://media.licdn.com/dms/image/v2/D4D05AQFhwx7e86KV7w/videocover-low/B4DZ8zTFwOHgBI-/0/1783272072345?e=1787140800&v=beta&t=7w3Qcrjzksj2VtxXl5AFI78TSyDBlshII3SkE7SPRos', desc: 'Canal oficial para suporte, infraestrutura física, reparos e periféricos.', link: 'https://grufix.vercel.app/', linkText: 'Ver App Grufix', linkIcon: 'fa-up-right-from-square' },
+            { id: 'zapbudget', cat: 'saas', color: 'teal', badge: 'SaaS Financeiro', title: 'Zapbudget', icon: 'fa-wallet', img: 'https://media.licdn.com/dms/image/v2/D4D2DAQEKKFRhIrEfvQ/profile-treasury-image-shrink_480_480/B4DZ8zF8psKsAU-/0/1783268625278?e=1787140800&v=beta&t=pxa-4yv0qQ1ptgwgxr_AGHcvX5EK-DBrhhvLiAZdros', desc: 'Plataforma web focada no controle de orçamento pessoal rápido sem planilhas complexas.', link: 'https://www.zapbudget.com.br/', linkText: 'Acessar Zapbudget', linkIcon: 'fa-up-right-from-square' },
             { id: 'rocca', cat: 'web', color: 'blue', badge: 'App Web', title: 'Rocca Forte', icon: 'fa-shield-halved', desc: 'Sistema corporativo focado em segurança de dados com alta performance de carregamento.', link: 'https://rocca-forte-projeto.vercel.app', linkText: 'Acessar Rocca', linkIcon: 'fa-up-right-from-square' },
-            { id: 'biomatrix', cat: 'web', color: 'emerald', badge: 'E-Commerce ESG', title: 'Biomatrix', icon: 'fa-leaf', desc: 'Plataforma de bebidas energéticas integrada com contagem de impacto em tempo real.', link: 'https://biomatrix-zeta.vercel.app', linkText: 'Acessar Biomatrix', linkIcon: 'fa-up-right-from-square' },
-            { id: 'kodeo', cat: 'web', color: 'cyan', badge: 'Fábrica Tech', title: 'Consultoria Kodeo', icon: 'fa-users', desc: 'Plataforma de atração de clientes que conecta softwares, agentes IA e funis de marketing.', link: 'https://www.kodeo.site/', linkText: 'Acessar Kodeo', linkIcon: 'fa-up-right-from-square' },
-            { id: 'ifood', cat: 'saas', color: 'rose', badge: 'IA & RAG', title: 'Bot GenIA iFood', icon: 'fa-robot', desc: 'Assistente inteligente (RAG) para responder dúvidas de políticas contratuais com segurança.', link: 'https://ifoodlovers-agente-ia-ifood.vercel.app/', linkText: 'Acessar Bot', linkIcon: 'fa-up-right-from-square' },
+            { id: 'biomatrix', cat: 'web', color: 'emerald', badge: 'E-Commerce ESG', title: 'Biomatrix', icon: 'fa-leaf', img: 'https://media.licdn.com/dms/image/v2/D4D2DAQHe30kaVJMA-w/profile-treasury-image-shrink_480_480/B4DZ8zNmYOJ4AY-/0/1783270631198?e=1787140800&v=beta&t=NnwjrCEjFkHHnvj6UA8-qptYiKcz9uiEFSIWETSfNT4', desc: 'Plataforma de bebidas energéticas integrada com contagem de impacto em tempo real.', link: 'https://biomatrix-zeta.vercel.app', linkText: 'Acessar Biomatrix', linkIcon: 'fa-up-right-from-square' },
+            { id: 'kodeo', cat: 'web', color: 'cyan', badge: 'Fábrica Tech', title: 'Consultoria Kodeo', icon: 'fa-users', img: 'https://media.licdn.com/dms/image/v2/D4D0BAQEhQosoRDsyuA/company-logo_100_100/B4DZpLsqhwGQAU-/0/1762206591562?e=1788393600&v=beta&t=tXPvC0QWMIAgKKHKezWroSJ9FZHNITQCp04fqWQXx0M', imgClass: 'object-contain p-6', desc: 'Plataforma de atração de clientes que conecta softwares, agentes IA e funis de marketing.', link: 'https://www.kodeo.site/', linkText: 'Acessar Kodeo', linkIcon: 'fa-up-right-from-square' },
+            { id: 'ifood', cat: 'saas', color: 'rose', badge: 'IA & RAG', title: 'Bot GenIA iFood', icon: 'fa-robot', img: './img/Ifood_fundo_app.jpg', desc: 'Assistente inteligente (RAG) para responder dúvidas de políticas contratuais com segurança.', link: 'https://ifoodlovers-agente-ia-ifood.vercel.app/', linkText: 'Acessar Bot', linkIcon: 'fa-up-right-from-square' },
             { id: 'mentordafe', cat: 'saas', color: 'amber', badge: 'Full-Stack SaaS', title: 'SaaS Mentor da Fé', icon: 'fa-heart', desc: 'Plataforma em Java/Spring que integra pagamentos Mercado Pago com mentoria por IA.', link: 'https://github.com/jonnyzera/saas-mentor-aplicacao-fe-PRODUCAO.git', linkText: 'Ver no GitHub', linkIcon: 'fa-github' },
             { id: 'palabra', cat: 'saas', color: 'amber', badge: 'IA e EdTech', title: 'La Palabra Explicada', icon: 'fa-book-bible', desc: 'Plataforma inteligente de análise teológica profunda em espanhol mediada por Inteligência Artificial.', link: 'https://palabra-explicada.vercel.app/', linkText: 'Ver Palabra', linkIcon: 'fa-up-right-from-square' },
             { id: 'brilhoshop', cat: 'web', color: 'pink', badge: 'E-Commerce', title: 'Brilho Shop (Yampi)', icon: 'fa-store', desc: 'Plataforma de vendas e catálogo online montada no ecossistema Yampi (LDO).', link: 'https://brilhoshop3.catalog.yampi.io/', linkText: 'Acessar Loja', linkIcon: 'fa-up-right-from-square' }
@@ -280,7 +282,6 @@
             hardware: { user: "Como funciona o suporte de hardware (Grufix)?", ai: "Gerando link da Grufix... Fale com o João sobre consertos e infraestrutura.", url: "https://wa.me/5511980960531?text=Olá%20Victor,%20orçamento%20suporte!" }
         };
 
-        // --- FUNÇÕES DE RENDERIZAÇÃO (DOM) ---
         function renderImpacts() {
             const container = document.getElementById('impacts-container');
             container.innerHTML = impacts.map(i => `
@@ -330,7 +331,7 @@
             grid.innerHTML = projectsData.map(p => `
                 <div class="project-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm flex flex-col hover:border-tech-500/50 transition-all duration-300" data-category="${p.cat}">
                     <div class="h-44 bg-slate-100 dark:bg-slate-800 relative flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-800">
-                        ${p.img ? `<img src="${p.img}" class="w-full h-full object-cover">` : 
+                        ${p.img ? `<img src="${p.img}" class="w-full h-full ${p.imgClass || 'object-cover'}">` : 
                         `<div class="text-center p-4">
                             <i class="fa-solid ${p.icon} text-4xl text-${p.color}-500 mb-1"></i><p class="text-xs font-bold text-slate-700 dark:text-slate-300">${p.title}</p>
                         </div>`}
@@ -408,6 +409,7 @@
                 d.className = `carousel-dot rounded-full transition-all focus:ring-2 focus:ring-tech-500 ${i===slideIdx ? 'w-4 bg-slate-950 dark:bg-white' : 'w-2 bg-slate-300 dark:bg-slate-700'}`;
             });
         }
+        
         const nextSlide = () => { slideIdx = (slideIdx + 1) % testimonials.length; updateCarousel(); };
         const prevSlide = () => { slideIdx = (slideIdx - 1 + testimonials.length) % testimonials.length; updateCarousel(); };
         const goToSlide = (i) => { slideIdx = i; updateCarousel(); };
