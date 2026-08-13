@@ -383,9 +383,9 @@
     <script>
         // --- DADOS DA APLICAÇÃO ---
         const impacts = [
-            { id: 'impact1', title: 'App de Orçamentos de Celular', company: 'PLUG GO', badge: 'Tecnologia', color: 'tech', desc: 'Ferramenta própria que automatiza e padroniza os orçamentos no balcão.', metric: '+100% Agilidade', icon: 'fa-bolt', mColor: 'emerald' },
-            { id: 'impact2', title: 'Funis de Conversão Pago', company: 'GEEK POINT', badge: 'Marketing', color: 'brand', desc: 'Campanhas em Meta Ads integradas ao Mercado Livre, otimizando o ROAS.', metric: 'ROAS Líder (Dez/23)', icon: 'fa-arrow-trend-up', mColor: 'emerald' },
-            { id: 'impact3', title: 'Infraestrutura e Redes', company: 'CASA DAVID', badge: 'Infraestrutura', color: 'sky', desc: 'Cabeamento estruturado com baixa latência e padronização de SOs.', metric: 'Quedas Mitigadas', icon: 'fa-circle-check', mColor: 'emerald' }
+            { id: 'impact1', title: 'App de Orçamentos de Celular', company: 'PLUG GO', badge: 'Tecnologia', color: 'tech', desc: 'Ferramenta própria que automatiza e padroniza os orçamentos no balcão.', metric: '+100% Agilidade', icon: 'fa-bolt', mColor: 'emerald', logo: 'https://pluggostore.com.br/PlugGo.jpeg' },
+            { id: 'impact2', title: 'Funis de Conversão Pago', company: 'GEEK POINT', badge: 'Marketing', color: 'brand', desc: 'Campanhas em Meta Ads integradas ao Mercado Livre, otimizando o ROAS.', metric: 'ROAS Líder (Dez/23)', icon: 'fa-arrow-trend-up', mColor: 'emerald', logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQGH2hp_CJt-Tw/company-logo_200_200/company-logo_200_200/0/1630626874230/geek_point_store_logo?e=1787788800&v=beta&t=4j-1QvrjV73YZRLTBmaJmLtbp2IaFfHcNFcDACmJn2g' },
+            { id: 'impact3', title: 'Infraestrutura e Redes', company: 'CASA DAVID', badge: 'Infraestrutura', color: 'sky', desc: 'Cabeamento estruturado com baixa latência e padronização de SOs.', metric: 'Quedas Mitigadas', icon: 'fa-circle-check', mColor: 'emerald', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQFM7fT8zLiJuQ/company-logo_200_200/company-logo_200_200/0/1691600442480/casa_de_david_logo?e=1787788800&v=beta&t=vhZ-SnsoAqfXJLRa5HBnIzpak30i1JbbQjDk5h0nrgU' }
         ];
 
         const projectsData = [
@@ -429,9 +429,12 @@
             container.innerHTML = impacts.map(i => `
                 <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 space-y-4 shadow-sm flex flex-col justify-between hover:border-slate-300 dark:hover:border-slate-700 transition-all">
                     <div class="space-y-3">
-                        <div class="flex justify-between items-start">
-                            <span class="text-xs font-bold text-${i.color}-600 dark:text-${i.color}-400 uppercase">${i.company}</span>
-                            <span class="bg-${i.color}-500/10 text-${i.color}-700 dark:text-${i.color}-400 text-[10px] px-2 py-0.5 rounded-full font-semibold">${i.badge}</span>
+                        <div class="flex justify-between items-start gap-2">
+                            <div class="flex items-center gap-2">
+                                <img src="${i.logo}" alt="${i.company}" class="w-6 h-6 rounded-md object-cover border border-slate-200 dark:border-slate-700 shrink-0 bg-white" onerror="this.onerror=null; this.src='https://placehold.co/100x100/e2e8f0/475569?text=${i.company.charAt(0)}';">
+                                <span class="text-xs font-bold text-${i.color}-600 dark:text-${i.color}-400 uppercase">${i.company}</span>
+                            </div>
+                            <span class="bg-${i.color}-500/10 text-${i.color}-700 dark:text-${i.color}-400 text-[10px] px-2 py-0.5 rounded-full font-semibold shrink-0">${i.badge}</span>
                         </div>
                         <h3 class="font-bold text-slate-900 dark:text-white text-base">${i.title}</h3>
                         <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed">${i.desc}</p>
