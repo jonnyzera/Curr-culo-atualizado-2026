@@ -125,19 +125,20 @@
                             <span class="text-[10px] bg-emerald-500/10 text-emerald-700 px-2.5 py-0.5 rounded font-extrabold uppercase">Ativo</span>
                         </div>
                         
-                        <!-- Hover Video Player (Formato Vertical/Instagram Reels) -->
+                        <!-- Hover Video Player (Formato Vertical/Instagram Reels) 100% compatível com GitHub Pages e Mobile -->
                         <div class="w-full aspect-[4/5] sm:aspect-[9/16] max-h-[420px] bg-slate-950 relative flex items-center justify-center overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 group/video cursor-pointer" 
-                             onmouseenter="this.querySelector('video').play()" 
-                             onmouseleave="let v = this.querySelector('video'); v.pause(); v.currentTime = 0;">
+                             onmouseenter="let v = this.querySelector('video'); let p = v.play(); if(p) p.catch(() => console.log('Bloqueado pelo navegador, necessita clique.'));" 
+                             onmouseleave="let v = this.querySelector('video'); v.pause();"
+                             onclick="let v = this.querySelector('video'); if(v.paused){ v.play().catch(()=>{}); } else { v.pause(); }">
                             
-                            <!-- Imagem de Capa -->
-                            <img src="./img/fotoGrufixPretoBranco.jpeg" alt="Grufix Capa" class="absolute inset-0 w-full h-full object-cover z-10 transition-opacity duration-500 group-hover/video:opacity-0">
+                            <!-- Imagem de Capa (Opcional, mas ajuda no carregamento inicial) -->
+                            <img src="./img/fotoGrufixPretoBranco.jpeg" alt="Grufix Capa" class="absolute inset-0 w-full h-full object-cover z-10 transition-opacity duration-500 group-hover/video:opacity-0 pointer-events-none">
                             
-                            <!-- Vídeo Silencioso Fundo -->
-                            <video src="./img/conteudoGrufixComputador.mp4" class="absolute inset-0 w-full h-full object-cover z-0" muted loop playsinline></video>
+                            <!-- Vídeo Silencioso Fundo (Playsinline é VITAL para iPhone/Mobile) -->
+                            <video src="./img/conteudoGrufixComputador.mp4" poster="./img/fotoGrufixPretoBranco.jpeg" class="absolute inset-0 w-full h-full object-cover z-0" muted loop playsinline preload="metadata"></video>
                             
                             <!-- Overlay UI Instagram (Lateral Direita) -->
-                            <div class="absolute right-3 bottom-16 z-20 flex flex-col gap-4 text-white opacity-0 group-hover/video:opacity-100 transition-opacity duration-500 translate-x-4 group-hover/video:translate-x-0">
+                            <div class="absolute right-3 bottom-16 z-20 flex flex-col gap-4 text-white opacity-0 group-hover/video:opacity-100 transition-opacity duration-500 translate-x-4 group-hover/video:translate-x-0 pointer-events-none">
                                 <div class="flex flex-col items-center gap-1 hover:scale-110 transition-transform"><i class="fa-solid fa-heart text-xl drop-shadow-md"></i><span class="text-[8px] font-bold">12k</span></div>
                                 <div class="flex flex-col items-center gap-1 hover:scale-110 transition-transform"><i class="fa-solid fa-comment text-xl drop-shadow-md"></i><span class="text-[8px] font-bold">85</span></div>
                                 <div class="flex flex-col items-center gap-1 hover:scale-110 transition-transform"><i class="fa-solid fa-paper-plane text-xl drop-shadow-md"></i><span class="text-[8px] font-bold">1k</span></div>
@@ -151,10 +152,10 @@
                             </div>
                             
                             <!-- Instagram Like Caption Overlay (Rodapé do vídeo) -->
-                             <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-20 opacity-0 group-hover/video:opacity-100 transition-opacity duration-500 translate-y-2 group-hover/video:translate-y-0 text-left">
+                             <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-20 opacity-0 group-hover/video:opacity-100 transition-opacity duration-500 translate-y-2 group-hover/video:translate-y-0 text-left pointer-events-none">
                                  <div class="flex items-center gap-2 mb-1.5">
                                      <div class="w-6 h-6 rounded-full bg-white overflow-hidden border border-white/20"><img src="./img/svg_macaco_favicon.png" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/e2e8f0/475569?text=G'"></div>
-                                     <p class="text-white text-xs font-bold flex items-center gap-1">grufix_tech <i class="fa-solid fa-circle-check text-blue-400 text-[10px]"></i></p>
+                                     <p class="text-white text-xs font-bold flex items-center gap-1">grufix_ <i class="fa-solid fa-circle-check text-blue-400 text-[10px]"></i></p>
                                  </div>
                                  <p class="text-white/90 text-[10px] leading-tight line-clamp-2">A elite da assistência técnica, infraestrutura de redes corporativa e reparo de hardware. 💻🔧</p>
                              </div>
