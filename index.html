@@ -112,10 +112,150 @@
         <section class="space-y-6 fade-in" style="animation-delay: 0.3s;">
             <div class="flex items-center gap-3">
                 <div class="p-2 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800"><i class="fa-solid fa-briefcase text-xl"></i></div>
-                <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Divisões Ativas e Empreendimentos</h2>
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Empreendimentos</h2>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="divisions-container">
-                <!-- Gerado via JS -->
+            <!-- Container Empreendimentos -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6" id="divisions-container">
+                
+                <!-- Grufix: Card Vertical (Instagram) (1 Coluna) com Efeito Video Hover -->
+                <div class="lg:col-span-1 group/card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 relative overflow-hidden flex flex-col justify-between shadow-sm hover:border-brand-500/40 transition-all duration-300">
+                    <div class="space-y-4 relative z-10">
+                        <div class="flex justify-between items-start">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-500/10 text-brand-700 dark:text-brand-400 rounded-full text-xs font-semibold"><i class="fa-solid fa-screwdriver-wrench text-[10px]"></i><span>Manutenção e Informática</span></div>
+                            <span class="text-[10px] bg-emerald-500/10 text-emerald-700 px-2.5 py-0.5 rounded font-extrabold uppercase">Ativo</span>
+                        </div>
+                        
+                        <!-- Hover Video Player (Formato Vertical/Instagram Reels) -->
+                        <div class="w-full aspect-[4/5] sm:aspect-[9/16] max-h-[420px] bg-slate-950 relative flex items-center justify-center overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 group/video cursor-pointer" 
+                             onmouseenter="this.querySelector('video').play()" 
+                             onmouseleave="let v = this.querySelector('video'); v.pause(); v.currentTime = 0;">
+                            
+                            <!-- Imagem de Capa -->
+                            <img src="./img/fotoGrufixPretoBranco.jpeg" alt="Grufix Capa" class="absolute inset-0 w-full h-full object-cover z-10 transition-opacity duration-500 group-hover/video:opacity-0">
+                            
+                            <!-- Vídeo Silencioso Fundo -->
+                            <video src="./img/conteudoGrufixComputador.mp4" class="absolute inset-0 w-full h-full object-cover z-0" muted loop playsinline></video>
+                            
+                            <!-- Overlay UI Instagram (Lateral Direita) -->
+                            <div class="absolute right-3 bottom-16 z-20 flex flex-col gap-4 text-white opacity-0 group-hover/video:opacity-100 transition-opacity duration-500 translate-x-4 group-hover/video:translate-x-0">
+                                <div class="flex flex-col items-center gap-1 hover:scale-110 transition-transform"><i class="fa-solid fa-heart text-xl drop-shadow-md"></i><span class="text-[8px] font-bold">12k</span></div>
+                                <div class="flex flex-col items-center gap-1 hover:scale-110 transition-transform"><i class="fa-solid fa-comment text-xl drop-shadow-md"></i><span class="text-[8px] font-bold">85</span></div>
+                                <div class="flex flex-col items-center gap-1 hover:scale-110 transition-transform"><i class="fa-solid fa-paper-plane text-xl drop-shadow-md"></i><span class="text-[8px] font-bold">1k</span></div>
+                            </div>
+
+                            <!-- Indicador de Efeito Hover Central (some ao passar o mouse) -->
+                            <div class="absolute inset-0 z-20 flex items-center justify-center transition-opacity duration-500 group-hover/video:opacity-0 pointer-events-none">
+                                <div class="w-12 h-12 bg-black/60 rounded-full flex items-center justify-center text-white shadow-lg backdrop-blur-sm animate-pulse">
+                                    <i class="fa-solid fa-play ml-1 text-xl"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Instagram Like Caption Overlay (Rodapé do vídeo) -->
+                             <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-20 opacity-0 group-hover/video:opacity-100 transition-opacity duration-500 translate-y-2 group-hover/video:translate-y-0 text-left">
+                                 <div class="flex items-center gap-2 mb-1.5">
+                                     <div class="w-6 h-6 rounded-full bg-white overflow-hidden border border-white/20"><img src="./img/svg_macaco_favicon.png" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/e2e8f0/475569?text=G'"></div>
+                                     <p class="text-white text-xs font-bold flex items-center gap-1">grufix_tech <i class="fa-solid fa-circle-check text-blue-400 text-[10px]"></i></p>
+                                 </div>
+                                 <p class="text-white/90 text-[10px] leading-tight line-clamp-2">A elite da assistência técnica, infraestrutura de redes corporativa e reparo de hardware. 💻🔧</p>
+                             </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <h3 class="text-2xl font-black tracking-tight leading-tight">Grufix</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-xs md:text-sm leading-relaxed">Suporte técnico especializado, manutenção de hardware, reparos físicos e redes.</p>
+                        </div>
+                    </div>
+                    <div class="mt-5 pt-5 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-2 relative z-10">
+                        <a href="https://grufix.vercel.app/" target="_blank" class="w-full text-xs font-bold px-4 py-2.5 rounded-xl flex items-center justify-center gap-2 transition-all bg-slate-900 dark:bg-slate-800 text-white border-slate-700"><i class="fa-solid fa-globe"></i><span>Acessar Grufix</span></a>
+                        <a href="https://wa.me/5511980960531?text=Olá,%20orçamento%20reparo!" target="_blank" class="w-full text-xs font-bold px-4 py-2.5 rounded-xl flex items-center justify-center gap-2 transition-all bg-brand-600 hover:bg-brand-700 text-white"><i class="fa-solid fa-phone"></i><span>Solicitar Reparo</span></a>
+                    </div>
+                </div>
+
+                <!-- Kodeo: Card Estilo LinkedIn Post (2 Colunas) -->
+                <div class="lg:col-span-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-0 relative overflow-hidden flex flex-col shadow-sm hover:border-tech-500/40 transition-all duration-300">
+                    
+                    <!-- Header do LinkedIn Post -->
+                    <div class="p-4 flex items-start gap-3">
+                        <a href="https://www.kodeo.site/" target="_blank" class="shrink-0 relative">
+                            <img src="https://media.licdn.com/dms/image/v2/D4D0BAQEhQosoRDsyuA/company-logo_100_100/B4DZpLsqhwGQAU-/0/1762206591562?e=1788393600&v=beta&t=tXPvC0QWMIAgKKHKezWroSJ9FZHNITQCp04fqWQXx0M" alt="Kodeo Logo" class="w-12 h-12 rounded object-contain bg-white border border-slate-100 dark:border-slate-700">
+                        </a>
+                        <div class="flex-1 min-w-0">
+                            <a href="https://www.kodeo.site/" target="_blank" class="hover:underline flex items-center gap-2">
+                                <span class="font-bold text-sm text-slate-900 dark:text-white truncate">Kodeo Consultoria Tech</span>
+                            </a>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 truncate">3 seguidores</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1 mt-0.5">
+                                8 m • Editado • <i class="fa-solid fa-earth-americas text-[10px]"></i>
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-2 shrink-0">
+                             <div class="hidden sm:inline-flex items-center gap-2 px-2.5 py-1 bg-tech-500/10 text-tech-700 dark:text-tech-400 rounded-full text-[10px] font-semibold"><i class="fa-solid fa-code"></i><span>Software & Nuvem</span></div>
+                            <span class="text-[9px] bg-emerald-500/10 text-emerald-700 px-2 py-0.5 rounded font-extrabold uppercase">Ativo</span>
+                            <button class="text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 p-1.5 rounded-full transition-colors"><i class="fa-solid fa-ellipsis"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Conteúdo Textual -->
+                    <div class="px-4 pb-3">
+                        <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed">
+                            Assim como a natureza nos oferece cores e sabores vibrantes, a Kodeo traz a vitalidade e a inovação que sua marca precisa para se destacar no ambiente digital. 🍇🥝🥭
+                        </p>
+                        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                             <span class="text-tech-600 font-medium hover:underline cursor-pointer">#DesenvolvimentoWeb</span>
+                             <span class="text-tech-600 font-medium hover:underline cursor-pointer">#SaaS</span>
+                             <span class="text-tech-600 font-medium hover:underline cursor-pointer">#InteligênciaArtificial</span>
+                        </div>
+                    </div>
+
+                    <!-- Grid de Imagens (LinkedIn Style) -->
+                    <div class="w-full bg-slate-100 dark:bg-slate-800 border-y border-slate-200 dark:border-slate-800">
+                         <div class="grid grid-cols-2 grid-rows-2 gap-[2px] max-h-[400px] aspect-[4/3] sm:aspect-video w-full overflow-hidden">
+                             <!-- Imagem 1 (Maior, ocupa as duas colunas em cima) -->
+                             <div class="col-span-2 row-span-1 bg-slate-950 relative overflow-hidden group/img">
+                                 <img src="https://media.licdn.com/dms/image/v2/D4D22AQFn8BqUB6fo2A/feedshare-shrink_800/B4DZqdeo1tHwAg-/0/1763578647058?e=1788393600&v=beta&t=NS-WwJDzV1h_KjKJV1kVZBveYenpXc1NLNG6pYAJT3Y" alt="Projeto Kodeo 1" class="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105 cursor-pointer">
+                             </div>
+                             <!-- Imagens menores em baixo -->
+                             <div class="col-span-1 row-span-1 bg-slate-950 relative overflow-hidden group/img">
+                                 <img src="https://media.licdn.com/dms/image/v2/D4D22AQEcT3WXgsYNJQ/feedshare-shrink_800/B4DZqdeo2DJABs-/0/1763578647067?e=1788393600&v=beta&t=gWfJ1lG4wFkpMBuw4Fp_dqI-5EKpER4PauxJL-lsJ1M" alt="Projeto Kodeo 2" class="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105 cursor-pointer">
+                             </div>
+                             <!-- Imagem com Overlay de contagem -->
+                             <div class="col-span-1 row-span-1 bg-slate-950 relative overflow-hidden group/img cursor-pointer">
+                                 <img src="https://media.licdn.com/dms/image/v2/D4D22AQHEdY6ssfbsew/feedshare-shrink_800/B4DZqdeo1SJMAg-/0/1763578647119?e=1788393600&v=beta&t=cJRVJ4jNHr0VyaFlF0EfUAflGVvE8YhOrzxa3ua3BAA" alt="Projeto Kodeo 3" class="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105">
+                                 <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-white text-xl font-medium hover:bg-black/50 transition-colors">
+                                     + 2
+                                 </div>
+                             </div>
+                         </div>
+                    </div>
+
+                    <!-- Rodapé Social (Reactions & Actions) -->
+                    <div class="px-4 py-2 flex flex-col justify-between flex-1 bg-slate-50 dark:bg-slate-900/50">
+                        <!-- Contagem de Reações -->
+                        <div class="flex items-center gap-1.5 py-2 border-b border-slate-200 dark:border-slate-700/50 text-[11px] text-slate-500">
+                             <div class="flex -space-x-1">
+                                 <div class="w-4 h-4 rounded-full bg-blue-500 border border-white dark:border-slate-900 flex items-center justify-center text-[8px] text-white"><i class="fa-solid fa-thumbs-up"></i></div>
+                                 <div class="w-4 h-4 rounded-full bg-red-500 border border-white dark:border-slate-900 flex items-center justify-center text-[8px] text-white"><i class="fa-solid fa-heart"></i></div>
+                             </div>
+                             <span class="hover:text-blue-600 hover:underline cursor-pointer">Você e outras 42 pessoas</span>
+                        </div>
+                        
+                        <!-- Botões de Ação -->
+                        <div class="flex items-center justify-between pt-1">
+                            <button class="flex-1 flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                                <i class="fa-regular fa-thumbs-up text-lg"></i> <span class="hidden sm:inline">Gostei</span>
+                            </button>
+                            <button class="flex-1 flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                                <i class="fa-regular fa-comment text-lg"></i> <span class="hidden sm:inline">Comentar</span>
+                            </button>
+                            <button class="flex-1 flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                                <i class="fa-solid fa-retweet text-lg"></i> <span class="hidden sm:inline">Compartilhar</span>
+                            </button>
+                            <button class="flex-1 flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                                <i class="fa-regular fa-paper-plane text-lg"></i> <span class="hidden sm:inline">Enviar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -247,14 +387,9 @@
             { id: 'impact3', title: 'Infraestrutura e Redes', company: 'CASA DAVID', badge: 'Infraestrutura', color: 'sky', desc: 'Cabeamento estruturado com baixa latência e padronização de SOs.', metric: 'Quedas Mitigadas', icon: 'fa-circle-check', mColor: 'emerald' }
         ];
 
-        const divisions = [
-            { id: 'dosvictor', name: 'Kodeo', sub: 'Estúdio de Software e Nuvem', color: 'tech', icon: 'fa-code', fallback: 'fa-cubes', fallbackText: 'Portfólio Kodeo', desc: 'Fábrica de software dedicada à concepção de aplicativos mobile, sistemas SaaS, integrações de APIs e IA.', feats: ['Apps Mobile Customizados', 'Plataformas Web SaaS'], btn1: { text: 'Acessar Kodeo', icon: 'fa-globe', link: 'https://www.kodeo.site/', style: 'bg-tech-600 hover:bg-tech-700 text-white' }, btn2: { text: 'Solicitar App', icon: 'fa-laptop-code', link: 'https://wa.me/5511980960531?text=Olá,%20orçamento%20app!', style: 'bg-slate-900 dark:bg-slate-800 text-white border-slate-700' } },
-            { id: 'grufixcard', name: 'GRUFIX Tech', sub: 'Assistência & Hardware', color: 'brand', icon: 'fa-screwdriver-wrench', fallback: 'fa-tools', fallbackText: 'Suporte GRUFIX', desc: 'Suporte técnico especializado, manutenção de hardware, reparo de smartphones, notebooks e redes.', feats: ['Manutenção de Celular', 'Reparo de PCs'], btn1: { text: 'Acessar Grufix', icon: 'fa-globe', link: 'https://grufix.vercel.app/', style: 'bg-slate-900 dark:bg-slate-800 text-white border-slate-700' }, btn2: { text: 'Solicitar Reparo', icon: 'fa-phone', link: 'https://wa.me/5511980960531?text=Olá,%20orçamento%20reparo!', style: 'bg-brand-600 hover:bg-brand-700 text-white' } }
-        ];
-
         const projectsData = [
             { id: 'pluggo', cat: 'web', color: 'indigo', badge: 'Produtividade', title: 'Sistema Orçamentos Plug Go', icon: 'fa-calculator', img: 'https://media.licdn.com/dms/image/v2/D4D2DAQHSD1XIkQlSZw/profile-treasury-image-shrink_480_480/B4DZ8zGtFpJQAY-/0/1783268823777?e=1787140800&v=beta&t=ABr5E_ZDMEuCwC2Q_57lVxssIoJ2J8k_Yy1BfluIYAs', desc: 'Automatização e cálculo de substituição de telas e conectores para assistência técnica.', link: 'https://sistema-plug-go-t-cnico-em-celular.vercel.app/', linkText: 'Acessar Aplicativo', linkIcon: 'fa-up-right-from-square' },
-            { id: 'jda', cat: 'web', color: 'orange', badge: 'Usinagem', title: 'JDA Usinagem', icon: 'fa-screwdriver-wrench', desc: 'Plataforma institucional e catálogo de peças industriais e ferramentaria de precisão.', link: 'https://jdausinagem.vercel.app', linkText: 'Acessar JDA', linkIcon: 'fa-up-right-from-square' },
+            { id: 'jda', cat: 'web', color: 'orange', badge: 'Usinagem', title: 'JDA Usinagem', icon: 'fa-screwdriver-wrench', img: 'https://www.kodeo.site/img/jda_tela_Site_img.png', desc: 'Plataforma institucional e catálogo de peças industriais e ferramentaria de precisão.', link: 'https://jdausinagem.vercel.app', linkText: 'Acessar JDA', linkIcon: 'fa-up-right-from-square' },
             { id: 'grufix', cat: 'maint', color: 'emerald', badge: 'Assistência', title: 'Portfólio & Landing Grufix', icon: 'fa-mobile-screen-button', img: 'https://media.licdn.com/dms/image/v2/D4D05AQFhwx7e86KV7w/videocover-low/B4DZ8zTFwOHgBI-/0/1783272072345?e=1787140800&v=beta&t=7w3Qcrjzksj2VtxXl5AFI78TSyDBlshII3SkE7SPRos', desc: 'Canal oficial para suporte, infraestrutura física, reparos e periféricos.', link: 'https://grufix.vercel.app/', linkText: 'Ver App Grufix', linkIcon: 'fa-up-right-from-square' },
             { id: 'zapbudget', cat: 'saas', color: 'teal', badge: 'SaaS Financeiro', title: 'Zapbudget', icon: 'fa-wallet', img: 'https://media.licdn.com/dms/image/v2/D4D2DAQEKKFRhIrEfvQ/profile-treasury-image-shrink_480_480/B4DZ8zF8psKsAU-/0/1783268625278?e=1787140800&v=beta&t=pxa-4yv0qQ1ptgwgxr_AGHcvX5EK-DBrhhvLiAZdros', desc: 'Plataforma web focada no controle de orçamento pessoal rápido sem planilhas complexas.', link: 'https://www.zapbudget.com.br/', linkText: 'Acessar Zapbudget', linkIcon: 'fa-up-right-from-square' },
             { id: 'rocca', cat: 'web', color: 'blue', badge: 'App Web', title: 'Rocca Forte', icon: 'fa-shield-halved', desc: 'Sistema corporativo focado em segurança de dados com alta performance de carregamento.', link: 'https://rocca-forte-projeto.vercel.app', linkText: 'Acessar Rocca', linkIcon: 'fa-up-right-from-square' },
@@ -263,11 +398,11 @@
             { id: 'ifood', cat: 'saas', color: 'rose', badge: 'IA & RAG', title: 'Bot GenIA iFood', icon: 'fa-robot', img: './img/Ifood_fundo_app.jpg', desc: 'Assistente inteligente (RAG) para responder dúvidas de políticas contratuais com segurança.', link: 'https://ifoodlovers-agente-ia-ifood.vercel.app/', linkText: 'Acessar Bot', linkIcon: 'fa-up-right-from-square' },
             { id: 'mentordafe', cat: 'saas', color: 'amber', badge: 'Full-Stack SaaS', title: 'SaaS Mentor da Fé', icon: 'fa-heart', desc: 'Plataforma em Java/Spring que integra pagamentos Mercado Pago com mentoria por IA.', link: 'https://github.com/jonnyzera/saas-mentor-aplicacao-fe-PRODUCAO.git', linkText: 'Ver no GitHub', linkIcon: 'fa-github' },
             { id: 'palabra', cat: 'saas', color: 'amber', badge: 'IA e EdTech', title: 'La Palabra Explicada', icon: 'fa-book-bible', desc: 'Plataforma inteligente de análise teológica profunda em espanhol mediada por Inteligência Artificial.', link: 'https://palabra-explicada.vercel.app/', linkText: 'Ver Palabra', linkIcon: 'fa-up-right-from-square' },
-            { id: 'brilhoshop', cat: 'web', color: 'pink', badge: 'E-Commerce', title: 'Brilho Shop (Yampi)', icon: 'fa-store', desc: 'Plataforma de vendas e catálogo online montada no ecossistema Yampi (LDO).', link: 'https://brilhoshop3.catalog.yampi.io/', linkText: 'Acessar Loja', linkIcon: 'fa-up-right-from-square' }
+            { id: 'brilhoshop', cat: 'web', color: 'pink', badge: 'E-Commerce', title: 'Brilho Shop (Yampi)', icon: 'fa-store', img: 'https://www.kodeo.site/img/ecommerce_1.webp', desc: 'Plataforma de vendas e catálogo online montada no ecossistema Yampi (LDO).', link: 'https://brilhoshop3.catalog.yampi.io/', linkText: 'Acessar Loja', linkIcon: 'fa-up-right-from-square' }
         ];
 
         const experiences = [
-            { role: 'Software Engineer / Fundador', company: 'Kodeo', time: '2025 - Atualmente', color: 'tech-500', isCurrent: true, logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQEhQosoRDsyuA/company-logo_100_100/B4DZpLsqhwGQAU-/0/1762206591562?e=1788393600&v=beta&t=tXPvC0QWMIAgKKHKezWroSJ9FZHNITQCp04fqWQXx0M', tasks: ['Desenvolvimento web e Desenvolvimento de SaaS.', 'Soluções em Nuvem e integrações com Inteligência Artificial.'] },
+            { role: 'Software Engineer / Fundador', company: 'Kodeo', time: '2024 - Atualmente', color: 'tech-500', isCurrent: true, logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQEhQosoRDsyuA/company-logo_100_100/B4DZpLsqhwGQAU-/0/1762206591562?e=1788393600&v=beta&t=tXPvC0QWMIAgKKHKezWroSJ9FZHNITQCp04fqWQXx0M', tasks: ['Desenvolvimento web e Desenvolvimento de SaaS.', 'Soluções em Nuvem e integrações com Inteligência Artificial.'] },
             { role: 'Técnico em Informática Júnior', company: 'Plug Go Informática e Games', time: '2025 - Atualmente', color: 'tech-500', isCurrent: true, logo: 'https://pluggostore.com.br/PlugGo.jpeg', tasks: ['Desenvolvimento do App próprio de orçamentos, otimizando o balcão.', 'Manutenção física em Android/iOS (telas, conectores).', 'Instalação e reparo avançado de Windows/Linux.'] },
             { role: 'Suporte Técnico e Auxiliar de TI', company: 'Instituição Casa de David', time: '2024 - 2025', color: 'slate-300 dark:bg-slate-700', isCurrent: false, logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQFM7fT8zLiJuQ/company-logo_200_200/company-logo_200_200/0/1691600442480/casa_de_david_logo?e=1787788800&v=beta&t=vhZ-SnsoAqfXJLRa5HBnIzpak30i1JbbQjDk5h0nrgU', tasks: ['Suporte Nível 1: roteadores, acessos, impressoras.', 'Cabeamento estruturado corporativo.', 'Formatação preventiva em massa.'] },
             { role: 'Estágio em Marketing e Vendas', company: 'Geek Point', time: '2023 - 2024', color: 'slate-300 dark:bg-slate-700', isCurrent: false, logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQGH2hp_CJt-Tw/company-logo_200_200/company-logo_200_200/0/1630626874230/geek_point_store_logo?e=1787788800&v=beta&t=4j-1QvrjV73YZRLTBmaJmLtbp2IaFfHcNFcDACmJn2g', tasks: ['SEO e Ads em Shopee/Mercado Livre.', 'Campanhas de performance (Meta/Google).', 'Líder de Vendas em Dezembro/2023.'] },
@@ -303,31 +438,6 @@
                     <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center">
                         <span class="text-[11px] text-slate-500">Impacto:</span>
                         <span class="text-xs font-extrabold text-${i.mColor}-600 dark:text-${i.mColor}-400 flex items-center gap-1"><i class="fa-solid ${i.icon}"></i> ${i.metric}</span>
-                    </div>
-                </div>`).join('');
-        }
-
-        function renderDivisions() {
-            const container = document.getElementById('divisions-container');
-            container.innerHTML = divisions.map(d => `
-                <div class="group/card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 relative overflow-hidden flex flex-col justify-between shadow-sm hover:border-${d.color}-500/40 transition-all duration-300">
-                    <div class="space-y-4 relative z-10">
-                        <div class="flex justify-between items-start">
-                            <div class="inline-flex items-center gap-2 px-3 py-1 bg-${d.color}-500/10 text-${d.color}-700 dark:text-${d.color}-400 rounded-full text-xs font-semibold"><i class="fa-solid ${d.icon} text-[10px]"></i><span>${d.sub}</span></div>
-                            <span class="text-[10px] bg-emerald-500/10 text-emerald-700 px-2.5 py-0.5 rounded font-extrabold uppercase">Ativo</span>
-                        </div>
-                        <div class="h-44 bg-slate-100 dark:bg-slate-800 relative flex items-center justify-center overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700">
-                            ${d.img ? `<img src="${d.img}" class="w-full h-full object-cover">` : 
-                            `<div class="text-center p-4">
-                                <i class="fa-solid ${d.fallback} text-4xl text-${d.color}-500 mb-1"></i><p class="text-xs font-bold text-slate-700 dark:text-slate-300">${d.fallbackText}</p>
-                            </div>`}
-                        </div>
-                        <div class="space-y-2"><h3 class="text-2xl font-black tracking-tight">${d.name}</h3><p class="text-slate-600 dark:text-slate-300 text-xs md:text-sm leading-relaxed">${d.desc}</p></div>
-                        <div class="grid grid-cols-2 gap-2 text-xs">${d.feats.map(f => `<div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-${d.color}-600"></i><span>${f}</span></div>`).join('')}</div>
-                    </div>
-                    <div class="mt-6 pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2 relative z-10">
-                        <a href="${d.btn1.link}" target="_blank" class="w-full sm:w-auto text-xs font-bold px-4 py-2.5 rounded-xl flex items-center justify-center gap-2 transition-all ${d.btn1.style}"><i class="fa-solid ${d.btn1.icon}"></i><span>${d.btn1.text}</span></a>
-                        <a href="${d.btn2.link}" target="_blank" class="w-full sm:w-auto text-xs font-bold px-4 py-2.5 rounded-xl flex items-center justify-center gap-2 transition-all ${d.btn2.style}"><i class="fa-solid ${d.btn2.icon}"></i><span>${d.btn2.text}</span></a>
                     </div>
                 </div>`).join('');
         }
@@ -447,7 +557,6 @@
         window.addEventListener('load', () => {
             // Renderiza componentes Data-Driven
             renderImpacts();
-            renderDivisions();
             renderProjects();
             renderExperiences();
             renderCarousel();
